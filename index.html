@@ -236,42 +236,122 @@
 
         <!-- 技能商店 -->
         <section id="skills">
-            <h2>🛒 技能商店</h2>
+            <h2>🛒 技能商店 & 安装指南</h2>
+            
+            <!-- 安装命令 -->
+            <div class="card install-guide">
+                <h3>📦 快速安装技能</h3>
+                <p>使用以下命令安装技能：</p>
+                <pre><code>openclaw skills install &lt;技能名称或URL&gt;</code></pre>
+                <p>或从 ClawHub 安装：</p>
+                <pre><code>openclaw skills install clawhub:&lt;技能名&gt;</code></pre>
+            </div>
+
+            <!-- 精选技能分类 -->
             <div class="card">
-                <p>安装技能包 = 雇佣具有特定能力的 AI 员工：</p>
+                <h3>🔥 精选技能推荐</h3>
+                <p>以下是团队常用的精选技能：</p>
+                
                 <div class="skill-categories">
                     <div class="skill-category">
                         <h4>👔 超级助理</h4>
-                        <p>邮件管理、日程安排、联系人管理</p>
-                        <span class="skill-count">6 个技能</span>
+                        <ul>
+                            <li>📧 邮件管理 - 读取/发送邮件</li>
+                            <li>📅 日程管理 - 创建/查看日程</li>
+                            <li>👥 联系人 - 查询/管理联系人</li>
+                        </ul>
+                        <span class="skill-count">6+ 技能</span>
                     </div>
                     <div class="skill-category">
                         <h4>✍️ 内容创作者</h4>
-                        <p>文章写作、社交媒体、AI 生图</p>
-                        <span class="skill-count">8 个技能</span>
+                        <ul>
+                            <li>📝 文章写作 - 公众号/博客</li>
+                            <li>🎨 AI 生图 - Stable Diffusion</li>
+                            <li>📹 视频制作 - AI 剪辑</li>
+                        </ul>
+                        <span class="skill-count">8+ 技能</span>
                     </div>
                     <div class="skill-category">
                         <h4>📈 股票分析师</h4>
-                        <p>行情监控、技术分析、策略提醒</p>
-                        <span class="skill-count">7 个技能</span>
+                        <ul>
+                            <li>📊 行情监控 - 实时价格</li>
+                            <li>📈 技术分析 - K线/指标</li>
+                            <li>🔔 买卖提醒 - 价提醒</li>
+                        </ul>
+                        <span class="skill-count">7+ 技能</span>
                     </div>
                     <div class="skill-category">
                         <h4>🌍 出海运营官</h4>
-                        <p>多语言翻译、海外社媒运营</p>
-                        <span class="skill-count">6 个技能</span>
+                        <ul>
+                            <li>🌐 多语言翻译</li>
+                            <li>📱 海外社媒运营</li>
+                            <li>🛒 跨境电商助手</li>
+                        </ul>
+                        <span class="skill-count">6+ 技能</span>
                     </div>
                     <div class="skill-category">
                         <h4>💻 开发助手</h4>
-                        <p>代码编写、GitHub 管理、Docker</p>
-                        <span class="skill-count">5 个技能</span>
+                        <ul>
+                            <li>🐙 GitHub 管理</li>
+                            <li>🐳 Docker 操作</li>
+                            <li>🔧 代码调试</li>
+                        </ul>
+                        <span class="skill-count">5+ 技能</span>
                     </div>
                     <div class="skill-category">
-                        <h4>🚀 三万同款</h4>
-                        <p>一人团队必备，38 个精选技能</p>
-                        <span class="skill-count highlight">38 个技能</span>
+                        <h4>🔍 数据采集</h4>
+                        <ul>
+                            <li>🕷️ 网页爬虫</li>
+                            <li>📊 竞品监控</li>
+                            <li>📰 舆情分析</li>
+                        </ul>
+                        <span class="skill-count highlight">热门</span>
                     </div>
                 </div>
-                <p class="more">🌐 更多技能尽在 <a href="https://clawhub.com" target="_blank">ClawHub</a>（5000+ 技能）</p>
+            </div>
+
+            <!-- ClawHub 技能市场 -->
+            <div class="card">
+                <h3>🌐 ClawHub 技能市场</h3>
+                <p>访问 <a href="https://clawhub.com" target="_blank">clawhub.com</a> 获取更多技能：</p>
+                <ul class="feature-list">
+                    <li>📚 <strong>5000+ 社区技能</strong> - 各种场景应有尽有</li>
+                    <li>⬇️ <strong>一键安装</strong> - <code>openclaw skills install clawhub:技能名</code></li>
+                    <li>⭐ <strong>热门推荐</strong> - 多人使用的优质技能</li>
+                    <li>🔧 <strong>自定义开发</strong> - 可以自己编写技能</li>
+                </ul>
+                <div class="cta-buttons">
+                    <a href="https://clawhub.com" target="_blank" class="btn btn-primary">🌐 访问 ClawHub</a>
+                </div>
+            </div>
+
+            <!-- GitHub 资源 -->
+            <div class="card">
+                <h3>🐙 GitHub 资源</h3>
+                <p>OpenClaw 官方 GitHub 仓库和社区技能：</p>
+                <ul class="feature-list">
+                    <li>📦 <strong><a href="https://github.com/openclaw/openclaw" target="_blank">openclaw/openclaw</a></strong> - 核心框架</li>
+                    <li>🛠️ <strong><a href="https://github.com/openclaw/skills" target="_blank">openclaw/skills</a></strong> - 官方技能库</li>
+                    <li>📖 <strong><a href="https://github.com/openclaw/docs" target="_blank">openclaw/docs</a></strong> - 官方文档</li>
+                    <li>💬 <strong><a href="https://discord.com/invite/clawd" target="_blank">Discord 社区</a></strong> - 交流讨论</li>
+                </ul>
+                <div class="cta-buttons">
+                    <a href="https://github.com/openclaw/openclaw" target="_blank" class="btn">🐙 GitHub</a>
+                    <a href="https://discord.com/invite/clawd" target="_blank" class="btn btn-secondary">💬 Discord</a>
+                </div>
+            </div>
+
+            <!-- 自定义技能 -->
+            <div class="card">
+                <h3>🔨 开发自己的技能</h3>
+                <p>技能本质上是一个包含 <code>SKILL.md</code> 的文件夹，你可以自定义：</p>
+                <pre><code>my-skill/
+├── SKILL.md          # 技能定义
+├── run.py            # 执行脚本
+└── requirements.txt  # 依赖</code></pre>
+                <p>创建后安装：</p>
+                <pre><code>openclaw skills install /path/to/my-skill</code></pre>
+                <p>更多开发文档：<a href="https://docs.openclaw.ai/cli/skills" target="_blank">官方技能开发指南</a></p>
             </div>
         </section>
 

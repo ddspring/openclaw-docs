@@ -407,6 +407,61 @@ section h2 {
     font-weight: bold;
 }
 
+/* Install Guide */
+.install-guide {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: white;
+}
+
+.install-guide h3 {
+    color: white;
+    margin-bottom: 15px;
+}
+
+.install-guide p {
+    color: #ccc;
+    margin-bottom: 10px;
+}
+
+.install-guide pre {
+    background: rgba(0,0,0,0.3);
+    padding: 15px 20px;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin: 10px 0;
+    border-left: 3px solid var(--primary);
+}
+
+.install-guide code {
+    color: #00b4d8;
+    font-family: 'Consolas', 'Monaco', monospace;
+    font-size: 0.95rem;
+}
+
+.skill-category ul {
+    list-style: none;
+    margin: 10px 0;
+    font-size: 0.85rem;
+    color: var(--text-light);
+}
+
+.skill-category li {
+    padding: 3px 0;
+}
+
+.cta-buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.cta-buttons .btn {
+    text-align: center;
+    flex: 1;
+    min-width: 150px;
+}
+
 /* Video List */
 .video-list {
     display: grid;
