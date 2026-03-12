@@ -3,52 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OpenClaw 知识分享</title>
+    <title>OpenClaw 知识中心</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <div class="container">
-            <h1>🦞 OpenClaw</h1>
-            <p class="subtitle">AI 助手，让你的电脑自动工作</p>
+            <h1>🦞 OpenClaw 知识中心</h1>
+            <p class="subtitle">团队专属的 AI 助手，让工作更高效</p>
+            <div class="header-actions">
+                <input type="text" id="search-box" placeholder="🔍 搜索文档、技能、教程...">
+            </div>
         </div>
     </header>
+
+    <nav class="main-nav">
+        <div class="container">
+            <ul>
+                <li><a href="#what-is">首页</a></li>
+                <li><a href="#getting-started">入门指南</a></li>
+                <li><a href="#tutorials">教程</a></li>
+                <li><a href="#skills">技能商店</a></li>
+                <li><a href="#tips">技巧精选</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+        </div>
+    </nav>
 
     <main class="container">
         <!-- 什么是 OpenClaw -->
         <section id="what-is">
-            <h2>什么是 OpenClaw？</h2>
-            <div class="card">
-                <p>OpenClaw 是一个开源的 AI 助手框架，它能让 AI 像人一样操作电脑——点击按钮、输入文字、读写文件、浏览网页。所有操作都在本地执行，保护你的隐私安全。</p>
+            <h2>🌟 什么是 OpenClaw？</h2>
+            <div class="card hero-card">
+                <p>OpenClaw 是一个<strong>自托管的 AI 网关</strong>，连接你的聊天应用（飞书、Telegram、Discord、WhatsApp 等）到 AI 助手。所有操作本地执行，数据隐私安全。</p>
                 <ul class="feature-list">
-                    <li>🤖 <strong>AI 驱动</strong> - 用自然语言指挥电脑</li>
+                    <li>🤖 <strong>AI 驱动</strong> - 用自然语言指挥电脑工作</li>
                     <li>🔒 <strong>本地运行</strong> - 数据不离开你的设备</li>
-                    <li>🔌 <strong>多通道支持</strong> - 飞书、Telegram、Discord、WhatsApp...</li>
-                    <li>🛠️ <strong>可扩展技能</strong> - 社区 5000+ 技能可选</li>
+                    <li>🔌 <strong>多通道</strong> - 飞书/Telegram/Discord/WhatsApp/Slack...</li>
+                    <li>🛠️ <strong>可扩展</strong> - 5000+ 社区技能可选</li>
+                    <li>📱 <strong>移动端</strong> - iOS/Android 节点远程控制</li>
                 </ul>
+            </div>
+        </section>
+
+        <!-- 快速统计 -->
+        <section id="stats">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-number">5+</span>
+                    <span class="stat-label">即时通讯渠道</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">5000+</span>
+                    <span class="stat-label">社区技能</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">∞</span>
+                    <span class="stat-label">自动化可能</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 入门指南 -->
+        <section id="getting-started">
+            <h2>🚀 入门指南</h2>
+            <div class="tutorials-grid">
+                <div class="tutorial-card">
+                    <div class="tutorial-icon">📥</div>
+                    <h3>安装 OpenClaw</h3>
+                    <p>Windows/Mac/Linux 多平台支持，5分钟快速安装</p>
+                    <span class="tag">新手必看</span>
+                    <a href="#">查看详情 →</a>
+                </div>
+                <div class="tutorial-card">
+                    <div class="tutorial-icon">📱</div>
+                    <h3>连接聊天渠道</h3>
+                    <p>飞书、Telegram、Discord、WhatsApp 配置指南</p>
+                    <span class="tag">基础配置</span>
+                    <a href="#">查看详情 →</a>
+                </div>
+                <div class="tutorial-card">
+                    <div class="tutorial-icon">🔑</div>
+                    <h3>配置 AI 模型</h3>
+                    <p>智谱 API、MiniMax、OpenAI 等主流模型配置</p>
+                    <span class="tag">进阶配置</span>
+                    <a href="#">查看详情 →</a>
+                </div>
+                <div class="tutorial-card">
+                    <div class="tutorial-icon">🎯</div>
+                    <h3>首次对话</h3>
+                    <p>开始你的第一个 AI 任务，让 AI 帮你工作</p>
+                    <span class="tag">快速上手</span>
+                    <a href="#">查看详情 →</a>
+                </div>
             </div>
         </section>
 
         <!-- 主流工具 -->
         <section id="tools">
-            <h2>主流工具对比</h2>
+            <h2>🛠️ 主流工具生态</h2>
             <div class="tools-grid">
-                <!-- AutoClaw -->
+                <!-- OpenClaw -->
                 <div class="tool-card">
-                    <div class="tool-header autoclaw">
-                        <h3>AutoClaw（澳龙）</h3>
-                        <span class="badge">智谱出品</span>
+                    <div class="tool-header openclaw">
+                        <h3>OpenClaw</h3>
+                        <span class="badge">开源核心</span>
                     </div>
                     <div class="tool-content">
-                        <p class="developer">开发商：智谱华章</p>
-                        <p class="description">将 Agent 执行力装进飞书对话框，一键激活 AI 智能体分身。</p>
+                        <p class="description">开源框架，Node.js 开发，可自托管或云端部署。</p>
                         <ul>
-                            <li>✅ 飞书生态深度集成</li>
-                            <li>✅ 对话框直接发任务</li>
-                            <li>✅ 本地执行 + 飞书回流</li>
-                            <li>❌ 仅支持飞书</li>
+                            <li>✅ 完全开源免费</li>
+                            <li>✅ 高度可定制</li>
+                            <li>✅ 活跃社区</li>
+                            <li>⚠️ 需要技术基础</li>
                         </ul>
-                        <a href="https://autoglm.zhipuai.cn/autoclaw" target="_blank" class="btn">官网 →</a>
+                        <a href="https://github.com/openclaw/openclaw" target="_blank" class="btn">GitHub →</a>
                     </div>
                 </div>
 
@@ -56,36 +125,34 @@
                 <div class="tool-card">
                     <div class="tool-header easyclaw">
                         <h3>EasyClaw</h3>
-                        <span class="badge">复盛出品</span>
+                        <span class="badge">开箱即用</span>
                     </div>
                     <div class="tool-content">
-                        <p class="developer">开发商：DOCUAGILE PTE. LTD</p>
-                        <p class="description">基于 OpenClaw 框架的原生应用，零配置，插即用。</p>
+                        <p class="description">基于 OpenClaw 的原生应用，零配置，插即用。</p>
                         <ul>
                             <li>✅ Mac/Windows 原生</li>
-                            <li>✅ 多通道支持（飞书/Telegram/Discord/Slack/WhatsApp）</li>
-                            <li>✅ 手机远程控制电脑</li>
-                            <li>✅ 隐私优先，本地运行</li>
-                            <li>✅ 送复盛+三湾官方技能包</li>
+                            <li>✅ 多通道支持</li>
+                            <li>✅ 手机远程控制</li>
+                            <li>✅ 隐私优先</li>
                         </ul>
                         <a href="https://easyclaw.com" target="_blank" class="btn">官网 →</a>
                     </div>
                 </div>
 
-                <!-- QClaw -->
+                <!-- AutoClaw -->
                 <div class="tool-card">
-                    <div class="tool-header qclaw">
-                        <h3>QClaw</h3>
-                        <span class="badge">其他</span>
+                    <div class="tool-header autoclaw">
+                        <h3>AutoClaw（澳龙）</h3>
+                        <span class="badge">飞书生态</span>
                     </div>
                     <div class="tool-content">
-                        <p class="developer">开发商：社区贡献</p>
-                        <p class="description">OpenClaw 生态中的轻量级工具，适合特定场景使用。</p>
+                        <p class="description">智谱出品，将 Agent 装进飞书对话框。</p>
                         <ul>
-                            <li>⚪ 轻量级设计</li>
-                            <li>⚪ 社区活跃</li>
-                            <li>⚪ 具体功能待探索</li>
+                            <li>✅ 飞书深度集成</li>
+                            <li>✅ 对话框直接发任务</li>
+                            <li>❌ 仅支持飞书</li>
                         </ul>
+                        <a href="https://autoglm.zhipuai.cn/autoclaw" target="_blank" class="btn">官网 →</a>
                     </div>
                 </div>
             </div>
@@ -93,7 +160,7 @@
 
         <!-- 使用场景 -->
         <section id="scenarios">
-            <h2>使用场景</h2>
+            <h2>💡 典型使用场景</h2>
             <div class="scenarios-grid">
                 <div class="scenario">
                     <h3>💼 超级助理</h3>
@@ -101,7 +168,7 @@
                 </div>
                 <div class="scenario">
                     <h3>✍️ 内容创作</h3>
-                    <p>公众号写作、小红书笔记、X 发帖、AI 生图做视频</p>
+                    <p>公众号写作、小红书笔记、社交媒体运营</p>
                 </div>
                 <div class="scenario">
                     <h3>📈 股票分析</h3>
@@ -119,6 +186,51 @@
                     <h3>🔄 自动化流程</h3>
                     <p>数据处理、批量操作、定时任务</p>
                 </div>
+                <div class="scenario">
+                    <h3>📊 数据采集</h3>
+                    <p>网页爬虫、竞品监控、舆情分析</p>
+                </div>
+                <div class="scenario">
+                    <h3>🎓 知识管理</h3>
+                    <p>文档整理、笔记汇总、智能问答</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 技巧精选 -->
+        <section id="tips">
+            <h2>🔥 技巧精选</h2>
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <span class="tip-tag">高阶</span>
+                    <h3>多频道路由配置</h3>
+                    <p>如何配置不同的聊天渠道对应不同的 AI 助手或工作流</p>
+                </div>
+                <div class="tip-card">
+                    <span class="tip-tag">自动化</span>
+                    <h3>Cron Jobs 定时任务</h3>
+                    <p>设置每日提醒、周报自动生成、数据定时同步</p>
+                </div>
+                <div class="tip-card">
+                    <span class="tip-tag">安全</span>
+                    <h3>权限精细控制</h3>
+                    <p>如何限制 AI 能访问的文件、执行的命令、发送的消息</p>
+                </div>
+                <div class="tip-card">
+                    <span class="tip-tag">移动端</span>
+                    <h3>手机远程控制电脑</h3>
+                    <p>配对 iOS/Android 节点，实现远程拍照、语音控制</p>
+                </div>
+                <div class="tip-card">
+                    <span class="tip-tag">进阶</span>
+                    <h3>自定义技能开发</h3>
+                    <p>如何编写自己的技能包，封装常用工作流</p>
+                </div>
+                <div class="tip-card">
+                    <span class="tip-tag">网络</span>
+                    <h3>Tailscale 远程访问</h3>
+                    <p>不在家也能远程控制家里的 OpenClaw 服务</p>
+                </div>
             </div>
         </section>
 
@@ -126,47 +238,144 @@
         <section id="skills">
             <h2>🛒 技能商店</h2>
             <div class="card">
-                <p>OpenClaw 支持安装各种技能包，装了什么技能，就像有什么能力的员工：</p>
-                <ul class="skill-packs">
-                    <li><strong>超级助理</strong> - 6 个技能</li>
-                    <li><strong>内容创作者</strong> - 8 个技能</li>
-                    <li><strong>股票分析师</strong> - 7 个技能</li>
-                    <li><strong>出海运营官</strong> - 6 个技能</li>
-                    <li><strong>开发助手</strong> - 5 个技能</li>
-                    <li><strong>三万同款</strong> - 38 个技能（一人团队）</li>
-                </ul>
-                <p class="more">还有 <strong>5000+ 社区技能</strong> 尽在 <a href="https://clawhub.com" target="_blank">ClawHub</a>！</p>
+                <p>安装技能包 = 雇佣具有特定能力的 AI 员工：</p>
+                <div class="skill-categories">
+                    <div class="skill-category">
+                        <h4>👔 超级助理</h4>
+                        <p>邮件管理、日程安排、联系人管理</p>
+                        <span class="skill-count">6 个技能</span>
+                    </div>
+                    <div class="skill-category">
+                        <h4>✍️ 内容创作者</h4>
+                        <p>文章写作、社交媒体、AI 生图</p>
+                        <span class="skill-count">8 个技能</span>
+                    </div>
+                    <div class="skill-category">
+                        <h4>📈 股票分析师</h4>
+                        <p>行情监控、技术分析、策略提醒</p>
+                        <span class="skill-count">7 个技能</span>
+                    </div>
+                    <div class="skill-category">
+                        <h4>🌍 出海运营官</h4>
+                        <p>多语言翻译、海外社媒运营</p>
+                        <span class="skill-count">6 个技能</span>
+                    </div>
+                    <div class="skill-category">
+                        <h4>💻 开发助手</h4>
+                        <p>代码编写、GitHub 管理、Docker</p>
+                        <span class="skill-count">5 个技能</span>
+                    </div>
+                    <div class="skill-category">
+                        <h4>🚀 三万同款</h4>
+                        <p>一人团队必备，38 个精选技能</p>
+                        <span class="skill-count highlight">38 个技能</span>
+                    </div>
+                </div>
+                <p class="more">🌐 更多技能尽在 <a href="https://clawhub.com" target="_blank">ClawHub</a>（5000+ 技能）</p>
+            </div>
+        </section>
+
+        <!-- 视频教程 -->
+        <section id="tutorials">
+            <h2>📺 视频教程</h2>
+            <div class="card">
+                <div class="video-list">
+                    <div class="video-item">
+                        <div class="video-placeholder">🎬</div>
+                        <div class="video-info">
+                            <h4>OpenClaw 5分钟快速安装</h4>
+                            <p>Windows/Mac/Linux 安装指南</p>
+                        </div>
+                    </div>
+                    <div class="video-item">
+                        <div class="video-placeholder">🎬</div>
+                        <div class="video-info">
+                            <h4>飞书频道配置实战</h4>
+                            <p>如何连接飞书机器人</p>
+                        </div>
+                    </div>
+                    <div class="video-item">
+                        <div class="video-placeholder">🎬</div>
+                        <div class="video-info">
+                            <h4>技能安装与使用</h4>
+                            <p>从 ClawHub 安装第一个技能</p>
+                        </div>
+                    </div>
+                    <div class="video-item">
+                        <div class="video-placeholder">🎬</div>
+                        <div class="video-info">
+                            <h4>手机远程控制</h4>
+                            <p>iOS/Android 节点配对指南</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq">
+            <h2>❓ 常见问题</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h4>Q: OpenClaw 免费吗？</h4>
+                    <p>A: OpenClaw 本身开源免费，但需要 API Key 调用 AI 模型（如智谱、OpenAI）。</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Q: 数据安全吗？</h4>
+                    <p>A: 所有数据本地处理，不上传到第三方云服务。你可以完全控制自己的数据。</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Q: 需要编程基础吗？</h4>
+                    <p>A: 使用 EasyClaw 不需要编程；自定义开发需要 JavaScript/Node.js 基础。</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Q: 能同时用多个聊天渠道吗？</h4>
+                    <p>A: 可以！OpenClaw 支持同时连接飞书、Telegram、Discord、WhatsApp 等多个渠道。</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Q: 支持哪些 AI 模型？</h4>
+                    <p>A: 智谱 GLM、OpenAI、Anthropic Claude、MiniMax 等主流模型都支持。</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Q: 能在手机上用吗？</h4>
+                    <p>A: 可以！通过配对 iOS/Android 节点，实现手机远程控制电脑。</p>
+                </div>
             </div>
         </section>
 
         <!-- 开始使用 -->
-        <section id="get-started">
-            <h2>🚀 快速开始</h2>
-            <div class="card">
-                <h3>方法一：本地安装（EasyClaw）</h3>
-                <ol>
-                    <li>访问 <a href="https://easyclaw.com" target="_blank">easyclaw.com</a></li>
-                    <li>下载 Windows 或 Mac 版本</li>
-                    <li>一键安装，运行即可</li>
-                </ol>
-                <h3>方法二：云端使用</h3>
-                <ol>
-                    <li>访问 <a href="https://easyclaw.work" target="_blank">easyclaw.work</a></li>
-                    <li>注册账号即可使用</li>
-                    <li>7×24 小时运行，无需开机</li>
-                </ol>
+        <section id="start">
+            <h2>🚀 立即开始</h2>
+            <div class="start-options">
+                <div class="start-card">
+                    <h3>🖥️ 本地使用</h3>
+                    <p>下载 EasyClaw，在自己电脑上运行</p>
+                    <a href="https://easyclaw.com" target="_blank" class="btn btn-primary">下载 EasyClaw</a>
+                </div>
+                <div class="start-card">
+                    <h3>☁️ 云端使用</h3>
+                    <p>无需开机，7×24 小时云端运行</p>
+                    <a href="https://easyclaw.work" target="_blank" class="btn btn-secondary">访问云端</a>
+                </div>
+                <div class="start-card">
+                    <h3>🔧 自行部署</h3>
+                    <p>开源版本，完全控制</p>
+                    <a href="https://github.com/openclaw/openclaw" target="_blank" class="btn">查看 GitHub</a>
+                </div>
             </div>
         </section>
     </main>
 
     <footer>
         <div class="container">
-            <p>🦞 OpenClaw 知识分享 | 由 AI 辅助编写</p>
+            <p>🦞 OpenClaw 知识中心 | 由 AI 辅助编写</p>
             <p class="links">
                 <a href="https://github.com/openclaw/openclaw" target="_blank">GitHub</a> |
-                <a href="https://docs.openclaw.ai" target="_blank">文档</a> |
-                <a href="https://clawhub.com" target="_blank">ClawHub</a>
+                <a href="https://docs.openclaw.ai" target="_blank">官方文档</a> |
+                <a href="https://clawhub.com" target="_blank">ClawHub</a> |
+                <a href="https://discord.com/invite/clawd" target="_blank">Discord</a>
             </p>
+            <p class="copyright">© 2026 OpenClaw 团队 | 内容持续更新中...</p>
         </div>
     </footer>
 
