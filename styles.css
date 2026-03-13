@@ -292,35 +292,7 @@ section h2 {
     background: var(--dark);
 }
 
-/* Scenarios */
-.scenarios-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-}
-
-.scenario {
-    background: var(--card-bg);
-    padding: 25px;
-    border-radius: var(--radius);
-    box-shadow: var(--shadow);
-    text-align: center;
-    transition: transform 0.3s;
-}
-
-.scenario:hover {
-    transform: scale(1.02);
-}
-
-.scenario h3 {
-    margin-bottom: 10px;
-    color: var(--secondary);
-}
-
-.scenario p {
-    color: var(--text-light);
-    font-size: 0.9rem;
-}
+/* Scenarios - see detailed styles at end of file */
 
 /* Tips */
 .tips-grid {
@@ -632,4 +604,127 @@ footer .copyright {
 
 section {
     animation: fadeIn 0.5s ease-out;
+}
+
+/* 场景详情样式 */
+.section-desc {
+    text-align: center;
+    color: var(--text-light);
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+.scenario {
+    background: var(--card-bg);
+    padding: 25px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: all 0.3s;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.scenario:hover {
+    transform: scale(1.02);
+    border-color: var(--primary);
+}
+
+.scenario h3 {
+    margin-bottom: 10px;
+    color: var(--secondary);
+}
+
+.scenario p {
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+/* 点击提示 */
+.click-hint {
+    display: block;
+    margin-top: 10px;
+    color: var(--primary);
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.scenario.active .click-hint {
+    display: none;
+}
+
+/* 场景详情展开 */
+.scenario-detail {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    text-align: left;
+    display: none;  /* 默认隐藏 */
+}
+
+.scenario.active .scenario-detail {
+    display: block;
+}
+
+.scenario-detail h4 {
+    color: var(--primary);
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.case-desc {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    margin-bottom: 15px !important;
+}
+
+/* 提示词盒子 */
+.prompt-box {
+    background: #1a1a2e;
+    border-radius: 8px;
+    padding: 15px;
+    position: relative;
+    margin-top: 10px;
+}
+
+.prompt-box pre {
+    margin: 0;
+    overflow-x: auto;
+}
+
+.prompt-box code {
+    color: #00ff88;
+    font-family: 'Consolas', 'Monaco', monospace;
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+
+.copy-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: background 0.3s;
+}
+
+.copy-btn:hover {
+    background: var(--secondary);
+}
+
+.scenario.active {
+    border-color: var(--primary);
+    box-shadow: 0 8px 25px rgba(255, 107, 53, 0.2);
+}
+
+/* 调整 grid 布局 */
+.scenarios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
 }

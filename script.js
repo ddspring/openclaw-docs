@@ -194,3 +194,83 @@ document.addEventListener('keydown', function(e) {
         document.getElementById('search-box').blur();
     }
 });
+
+// 复制提示词功能
+function copyPrompt(promptId) {
+    const promptText = document.getElementById(promptId).textContent;
+    navigator.clipboard.writeText(promptText).then(function() {
+        // 显示复制成功提示
+        showCopySuccess();
+    }).catch(function(err) {
+        console.error('复制失败:', err);
+        // 备用方案：使用selection API
+        const range = document.createRange();
+        range.selectNode(document.getElementById(promptId));
+        window.getSelection().removeAllRanges();
+        window.getSelection().addRange(range);
+        document.execCommand('copy');
+        window.getSelection().removeAllRanges();
+        showCopySuccess();
+    });
+}
+
+// 场景卡片点击展开/收起
+document.addEventListener('DOMContentLoaded', function() {
+    // 为每个场景卡片添加点击事件
+    document.querySelectorAll('.scenario').forEach(function(scenario) {
+        scenario.addEventListener('click', function(e) {
+            // 如果点击的是复制按钮，不触发展开/收起
+            if (e.target.classList.contains('copy-btn')) {
+                return;
+            }
+            
+            // 切换 active 状态
+            this.classList.toggle('active');
+            
+            // 滚动到视图内（如果是展开）
+            if (this.classList.contains('active')) {
+                setTimeout(() => {
+                    this.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                }, 100);
+            }
+        });
+    });
+});
+
+function showCopySuccess() {
+    // 创建提示元素
+    const toast = document.createElement('div');
+    toast.style.cssText = `
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: rgba(0, 128, 0, 0.9);
+        color: white;
+        padding: 20px 40px;
+        border-radius: 10px;
+        font-size: 1.2rem;
+        z-index: 10000;
+        animation: fadeInOut 1.5s ease;
+    `;
+    toast.textContent = '✅ 已复制到剪贴板！';
+    
+    // 添加动画样式
+    const style = document.createElement('style');
+    style.textContent = `
+        @keyframes fadeInOut {
+            0% { opacity: 0; transform: translate(-50%, -50%) scale(0.8); }
+            20% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+            80% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+            100% { opacity: 0; transform: translate(-50%, -50%) scale(0.8); }
+        }
+    `;
+    document.head.appendChild(style);
+    document.body.appendChild(toast);
+    
+    // 1.5秒后移除
+    setTimeout(() => {
+        toast.remove();
+        style.remove();
+    }, 1500);
+}
