@@ -717,6 +717,28 @@ section {
     background: var(--secondary);
 }
 
+/* 案例链接 */
+.case-link {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px dashed var(--border);
+}
+
+.case-link p {
+    color: var(--text);
+    font-size: 0.95rem;
+}
+
+.case-link a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.case-link a:hover {
+    text-decoration: underline;
+}
+
 .scenario.active {
     border-color: var(--primary);
     box-shadow: 0 8px 25px rgba(255, 107, 53, 0.2);
